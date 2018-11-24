@@ -14,4 +14,8 @@ export class AppComponent {
     alert(this.nome2);
     console.log(this.nome2);
   }
+
+  salarEvento($event: any) {
+    alert($event);
+  }
 }
