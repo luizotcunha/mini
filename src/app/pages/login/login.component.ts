@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Login } from 'src/app/shared/models/login';
 import { Registro } from 'src/app/shared/models/registro';
+import { AuthService } from 'src/app/shared/services/auth.service';
 
 @Component({
   selector: 'app-login',
@@ -11,7 +12,7 @@ export class LoginComponent implements OnInit {
   login: Login;
   registro: Registro;
 
-  constructor() { }
+  constructor(private authService: AuthService) { }
 
   ngOnInit() {
       this.login = new Login();
@@ -19,11 +20,11 @@ export class LoginComponent implements OnInit {
   }
 
   efetuarLogin() {
-    console.log(this.login);
+    this.authService.efetuarLogin(this.login);
   }
 
   efetuarCadastro() {
-    console.log(this.registro);
+    this.authService.efetuarCadastro(this.registro);
   }
 
 }
