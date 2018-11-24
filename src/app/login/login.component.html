@@ -1,6 +1,6 @@
 <mat-card>
-<mat-tab-group>
-  <mat-tab label="First">
+<mat-tab-group mat-align-tabs="center">
+  <mat-tab label="Login">
     <form>
           <!--EMAIL-->
           <mat-form-field>
@@ -18,7 +18,31 @@
           </button>
     </form>
   </mat-tab>
-  <mat-tab label="Second"> Content 2 </mat-tab>
-  <mat-tab label="Third"> Content 3 </mat-tab>
+  <mat-tab label="Cadastro">
+      <form>
+      <mat-form-field>
+        <span matPrefix>@</span>
+        <input matInput placeholder="Usuario" type="text" name="nome" required>
+      </mat-form-field>
+
+      <mat-form-field>
+        <input matInput placeholder="Email" type="email" name="email" required>
+      </mat-form-field>
+
+      <mat-form-field>
+        <input matInput placeholder="Senha" type="password" name="senha" required>
+      </mat-form-field>
+
+      <mat-form-field>
+        <input matInput placeholder="Repita a senha" type="password" name="repitaSenha" required>
+      </mat-form-field>
+
+      <button mat-raised-button type="submit" color="primary">
+        Cadastrar
+      </button>
+</form>
+
+  </mat-tab>
+
 </mat-tab-group>
 </mat-card>
