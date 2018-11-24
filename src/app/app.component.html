@@ -1,0 +1,25 @@
+<!--The content below is only a placeholder and can be replaced.-->
+
+<div>
+<label>Digite seu primeiro nome: </label>
+<input type="text" [value]="nome">
+</div>
+
+<div>
+<label>Digite seu segundo nome: </label>
+<input type="text" [(ngModel)]="nome2">
+</div>
+
+<div>
+  Primerio nome: {{ nome }}
+</div>
+
+<div>
+  Segundo noem: {{ nome2 }}
+</div>
+
+<div>
+  <button (click)="exibirAlerta()">bait</button>
+</div>
+
+<router-outlet></router-outlet>
