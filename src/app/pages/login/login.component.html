@@ -1,16 +1,16 @@
 <mat-card>
 <mat-tab-group mat-align-tabs="center">
   <mat-tab label="Login">
-    <form>
+    <form (submit)="efetuarLogin()">
           <!--EMAIL-->
           <mat-form-field>
-            <input matInput placeholder="Email" type="email" name="email" required>
+            <input matInput placeholder="Email" type="email" name="email" [(ngModel)]="login.email" required>
           </mat-form-field>
 
 
           <!--SENHA-->
           <mat-form-field>
-            <input matInput placeholder="Senha" type="password" name="senha" required>
+            <input matInput placeholder="Senha" type="password" name="senha" [(ngModel)]="login.senha" required>
           </mat-form-field>
 
           <button mat-raised-button type="submit" color="primary">

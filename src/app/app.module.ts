@@ -10,7 +10,7 @@ import {MatButtonModule} from '@angular/material/button';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { LoginComponent } from './login/login.component';
+import { LoginComponent } from './pages/login/login.component';
 
 
 @NgModule({
