@@ -22,4 +22,8 @@ export class LoginComponent implements OnInit {
     console.log(this.login);
   }
 
+  efetuarCadastro() {
+    console.log(this.registro);
+  }
+
 }

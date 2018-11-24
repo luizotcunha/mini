@@ -19,22 +19,26 @@
     </form>
   </mat-tab>
   <mat-tab label="Cadastro">
-      <form>
+      <form (submit)="efetuarCadastro()">
       <mat-form-field>
         <span matPrefix>@</span>
-        <input matInput placeholder="Usuario" type="text" name="nome" required>
+        <input matInput placeholder="Usuario" type="text" name="nome"
+        [(ngModel)]="registro.nome" required>
       </mat-form-field>
 
       <mat-form-field>
-        <input matInput placeholder="Email" type="email" name="email" required>
+        <input matInput placeholder="Email" type="email" name="email"
+        [(ngModel)]="registro.email" required>
       </mat-form-field>
 
       <mat-form-field>
-        <input matInput placeholder="Senha" type="password" name="senha" required>
+        <input matInput placeholder="Senha" type="password" name="senha"
+        [(ngModel)]="registro.senha" required>
       </mat-form-field>
 
       <mat-form-field>
-        <input matInput placeholder="Repita a senha" type="password" name="repitaSenha" required>
+        <input matInput placeholder="Repita a senha" type="password" name="repitaSenha"
+        [(ngModel)]="registro.repitaSenha" required>
       </mat-form-field>
 
       <button mat-raised-button type="submit" color="primary">
